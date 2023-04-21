@@ -1,10 +1,11 @@
 import React from "react";
 import "./css/App.css";
+import WeatherCard from "./components/WeatherCard";
 
 const App = () => {
   return (
     <React.Fragment>
-      <h1>Weather App</h1>
+      <WeatherCard />
     </React.Fragment>
   );
 };
