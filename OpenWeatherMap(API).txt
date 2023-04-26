@@ -1,0 +1,129 @@
+Project :- Weather app 
+Application Programing Interface :- OpenWeatherMap
+Configuration :- Open Source (Public API)
+Dependencies: Axios 
+
+please find the attached OpenWeatherMap Api Key.
+key: "a6bc244f057d38bd104009e5d359b3a7"
+______________________________________________________
+
+*OpenWeatherMap Overview:
+
+OpenWeatherMap is a website and API that provides weather data for locations all over the world.
+It offers both free and paid weather API plans for developers who want to integrate weather information into their applications.
+With OpenWeatherMap, developers can access real-time and historical weather data,
+as well as weather forecasts for up to 16 days in advance. 
+The API provides a wide range of weather data, including temperature, humidity, wind speed and direction, precipitation, and more. 
+OpenWeatherMap is widely used by developers in a variety of industries, from transportation and logistics to agriculture and energy. 
+It is a reliable source of weather data that can help developers create more accurate and useful applications.  
+_______________________________________________________________________________________________________________
+
+*API SignUp Program:
+
+STEP1: Go to the OpenWeatherMap website: Open your web browser and navigate to the OpenWeatherMap website at https://openweathermap.org/.
+
+STEP2: Click on "Sign Up" in the top right corner: Once you're on the OpenWeatherMap homepage, click on the "Sign Up" button in the top right corner of the page.
+
+STEP3: Fill out the registration form: On the registration page, you'll be asked to provide your email address, create a password, and agree to the terms of service. You'll also need to fill out a captcha to verify that you're a real person.
+
+STEP4: Verify your email address: After you've filled out the registration form, OpenWeatherMap will send you an email to verify your email address. Click on the verification link in the email to confirm your account.
+
+STEP5: Log in to your account: Once you've verified your email address, you can log in to your OpenWeatherMap account. You can log in using the email address and password you provided during registration.
+_________________________________________________________________________________________________________________________________
+
+*Generating Api:
+
+Generate an API key: To use the OpenWeatherMap API, you need to generate an API key. 
+To generate an API key, go to the "API keys" section of your account dashboard. Click on the "Generate" button to create a new API key. 
+Your API key will be a unique identifier that you'll use to make requests to the OpenWeatherMap API.
+
+______________________________________________________________________________________________________________________________
+
+*API sample components:
+
+{"coord":{"lon":73.8553,"lat":18.5196},
+ "weather":[{"id":802,"main":"Clouds","description":"scattered clouds","icon":"03n"}],
+ "base":"stations",
+ "main":{"temp":27.68,
+ 	    "feels_like":27.79,
+ 	    "temp_min":27.68,
+ 	    "temp_max":27.68,
+ 	    "pressure":1008,
+ 	    "humidity":46,
+ 	    "sea_level":1008,
+ 	    "grnd_level":948},
+ 	    "visibility":10000,
+ 	    "wind":{"speed":5.43,"deg":272,"gust":7.12},
+ 	    "clouds":{"all":28},
+ 	    "dt":1682519088,
+ 	    "sys":{"country":"IN","sunrise":1682469628,"sunset":1682515450},
+ 	    "timezone":19800,
+ 	    "id":1259229,
+ 	    "name":"Pune",
+ 	    "cod":200
+ 	   }
+}
+ 	   
+_______________________________________________________________________________________________________________
+
+*OpenWeatherMap Integration program:
+
+Install Axios: Axios is a popular library for making HTTP requests in JavaScript. 
+Install it by running the following command in your project directory:
+
+		npm install axios
+		
+Import Axios: Import Axios at the top of your WeatherCard.js file:
+
+		import axios from 'axios';
+
+Create a function to fetch weather data: 
+Create a function that will use Axios to fetch weather data from the OpenWeatherMap API:
+
+	const handleFormSubmit = async e => {
+    e.preventDefault();
+      const response = await axios.get(
+        `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`
+      );
+      setWeatherData(response.data);
+  };
+
+________________________________________________________________________________________________________________________
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
